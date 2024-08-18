@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->Port = $mailport;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+		
+		$mail->CharSet = 'UTF-8';
 
         $mail->setFrom($from_mail, $from_name);
         $mail->addReplyTo($email, $name);
